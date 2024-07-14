@@ -15,12 +15,11 @@ const cards = [
   "In reprehenderit in voluptate"
 ];
 
-function Hand() {
-
+function Hand({ onCardSelect }) {
   return (
     <div className="hand">
       {cards.map((card, index) => (
-        <Card key={index} text={card} />
+        <Card key={index} text={card} onClick={() => onCardSelect(card)} />
       ))}
     </div>
   );
