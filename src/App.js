@@ -2,9 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { UsernameProvider } from './contexts/UsernameContext';
 import Hand from './components/Hand';
-import BlackCard from './components/BlackCard';
 import Login from './components/Login';
+import PlayField from './components/PlayField';
 import './App.css';
+
+
 
 function App() {
   return (
@@ -21,27 +23,30 @@ function App() {
   );
 }
 
+//main page when playing
 function GamePage() {
 
   return (
-    <header className="App-header">
-      <GameHeader />
-      <BlackCard text="Lorem ipsum dolor sit amet" />
+    <div className="game">
+      <GameHeader />  
+      <PlayField />
       <h1>Your Hand</h1>
       <Hand />
-    </header>
+    </div>
   );
 }
 
+//displays username somewhere
 function GameHeader() {
   // Display the username in the header or any other part of the game UI
   return (
-    <div className="game-header">
+    <div className="header">
       <UsernameDisplay />
     </div>
   );
 }
 
+//!doesn't work yet
 function UsernameDisplay() {
   // Display the username using the context
   const { username } = "jake" //useUsername();

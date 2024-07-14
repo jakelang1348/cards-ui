@@ -3,9 +3,10 @@
   font-family: Helvetica;
 }
 
-.App-header {
+.game {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,13 +16,8 @@
 }
 
 h1 {
-  margin-bottom: 5px;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+  font-size: calc(20px + 2vmin);
 }
 
-.hand {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  margin: 20px;
-  margin-top: 0px;
-}

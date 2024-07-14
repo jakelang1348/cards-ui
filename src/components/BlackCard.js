@@ -3,7 +3,7 @@ import './BlackCard.css';
 
 function BlackCard({ text }) {
   return (
-    <div className="black-card">
+    <div className="card black-card">
       {text}
     </div>
   );
