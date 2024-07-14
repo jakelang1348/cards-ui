@@ -7,6 +7,8 @@ function PlayField() {
   return (
     <div className="play-field">
         <BlackCard text="Lorem ipsum dolor sit amet" />
+        <BlackCard text="Lorem ipsum dolor sit amet" />
+
     </div>
   );
 }

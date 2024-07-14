@@ -2,6 +2,9 @@
 .black-card {
     background: black;
     color: white;
+    margin: 0.5vw;
+    margin-bottom: 0.2vw;
+
   }
   .black-card:hover {
     transform: scale(1.05);

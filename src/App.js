@@ -28,32 +28,9 @@ function GamePage() {
 
   return (
     <div className="game">
-      <GameHeader />  
       <PlayField />
       <h1>Your Hand</h1>
       <Hand />
-    </div>
-  );
-}
-
-//displays username somewhere
-function GameHeader() {
-  // Display the username in the header or any other part of the game UI
-  return (
-    <div className="header">
-      <UsernameDisplay />
-    </div>
-  );
-}
-
-//!doesn't work yet
-function UsernameDisplay() {
-  // Display the username using the context
-  const { username } = "jake" //useUsername();
-
-  return (
-    <div className="username-display">
-      {username && <p>Welcome, {username}!</p>}
     </div>
   );
 }
