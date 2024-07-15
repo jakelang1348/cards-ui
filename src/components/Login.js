@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     if (inputUsername.trim()) {
       addUsername(inputUsername.trim());
-      navigate('/');
+      navigate('/lobby');
     }
   };
 

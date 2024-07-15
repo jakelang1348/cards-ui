@@ -1,0 +1,38 @@
+
+.results-page {
+    font-size: calc(10px + 2vmin);
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(220, 13%, 18%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .black-card-container {
+    margin-top: 1vh;
+  }
+
+  .white-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3vh;
+    padding: 0 20px;
+  }
+  .results-page .card {
+    border-radius: 10px;
+    margin: 0.5vw;
+    width: 15vw; /* TODO will need to be adjusted based on the number of players in the game */
+    height: 21vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+
+
+    font-size: 90%;
+  }
