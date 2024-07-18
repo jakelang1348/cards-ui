@@ -12,6 +12,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [blackCard, setBlackCard] = useState("Lorem ipsum dolor sit amet");
   const [submittedCards, setSubmittedCards] = useState([]);
+  const [userName, setUserName] = useState("");
 
   const handleCardSelect = (card) => {
     setSelectedCard(card);
@@ -30,8 +31,8 @@ function App() {
       <UsernameProvider>
         <div className="App">
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path='/lobby' element={<GameLobby />} />
+            <Route path="/login" element={<Login onNameEnter={setUserName} />} />
+            <Route path='/lobby' element={<GameLobby userName={userName} />} />
             <Route path="/" element={
               <GamePage 
                 selectedCard={selectedCard} 

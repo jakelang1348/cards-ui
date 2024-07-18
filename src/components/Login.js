@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useUsername } from '../contexts/UsernameContext';
 import './Login.css';
 
-function Login() {
+function Login( {onNameEnter} ) {
   const [inputUsername, setInputUsername] = useState('');
   const { addUsername } = useUsername();
   const navigate = useNavigate();
@@ -12,6 +12,7 @@ function Login() {
     e.preventDefault();
     if (inputUsername.trim()) {
       addUsername(inputUsername.trim());
+      onNameEnter(inputUsername); //sets username in App
       navigate('/lobby');
     }
   };

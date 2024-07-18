@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './GameLobby.css';
 
-function GameLobby() {
+function GameLobby( {userName} ) {
   const [gameCode, setGameCode] = useState('');
   const [hostName, setHostName] = useState('');
   const [joinedUsers, setJoinedUsers] = useState([]);
@@ -12,7 +12,6 @@ function GameLobby() {
     { id: 3, host: 'Player3', players: 1 },
     { id: 3, host: 'Player3', players: 1 },
     { id: 3, host: 'Player3', players: 1 }
-    // Add more mock data as needed
   ]);
 
   const generateGameCode = () => {
@@ -28,7 +27,7 @@ function GameLobby() {
   const hostGame = () => {
     // Implement host game logic
     generateGameCode();
-    setHostName('Your Username'); // Replace with actual username
+    setHostName(userName); // Replace with actual username
   };
 
   const startGame = () => {
